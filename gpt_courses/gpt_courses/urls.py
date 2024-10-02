@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import generate_doc
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', generate_doc, name='generate_doc'),
 ]

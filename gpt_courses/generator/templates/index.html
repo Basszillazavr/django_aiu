@@ -1,0 +1,15 @@
+<!-- templates/index.html -->
+<form method="POST" action="{% url 'generate_doc' %}">
+    {% csrf_token %}
+    <label>Тип документа:</label>
+    <select name="doc_type">
+        <option value="coursework">Курсовая</option>
+        <option value="thesis">Дипломная</option>
+        <option value="essay">Эссе</option>
+    </select>
+    <br>
+    <label>Тема:</label>
+    <input type="text" name="topic" required>
+    <br>
+    <button type="submit">Сгенерировать документ</button>
+</form>
