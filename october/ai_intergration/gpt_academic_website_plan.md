@@ -69,10 +69,10 @@
    ```python
    # urls.py
    from django.urls import path
-   from .views import generate_doc
+   from generator import views
 
    urlpatterns = [
-       path('', generate_doc, name='generate_doc'),
+       path('', views.generate_doc, name='generate_doc'),
    ]
    ```
 
